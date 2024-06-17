@@ -1,13 +1,11 @@
 from django.shortcuts import render
-from .models import CarouselImage, About
+from .models import CarouselImage
 
 def home(request):
     image = CarouselImage.objects.all()
-    about = About.objects.first()
 
     context = {
         'image': image,
-        'about': about,
     }
     return render(request, 'main/index.html', context)
 
