@@ -1,0 +1,1 @@
+web: gunicorn zen_oasis_spa.wsgi
