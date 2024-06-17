@@ -3,6 +3,7 @@
 :root {
     --primary-color: #78c2ad;
     --secondary-color: #fff5e0;
+    --hover: #609c8b;
 }
 
 body {
@@ -29,11 +30,15 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.text-dutch-white {
+.text-old-lace {
     color: var(--secondary-color);
 }
 
-.btn-dutch-white {
+.btn-old-lace {
     background-color: var(--secondary-color);
     border: var(--secondary-color);
+}
+
+footer {
+    background: var(--primary-color);
 }
