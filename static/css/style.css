@@ -39,6 +39,11 @@ footer a:hover {
     border: var(--secondary-color);
 }
 
+.custom-margin {
+    margin-top: 200px;
+}
+
 footer {
+    margin-top: 40px;
     background: var(--primary-color);
 }

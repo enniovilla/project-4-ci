@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import CarouselImage
 
-# Create your views here.
+def home(request):
+    image = CarouselImage.objects.all()
+    return render(request, 'main/index.html', {'image': image})
