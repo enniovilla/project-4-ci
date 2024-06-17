@@ -12,3 +12,12 @@ class CarouselImage(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Welcome(models.Model):
+    heading = models.CharField(max_length=200)
+    paragraph = models.TextField()
+    is_active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.heading
