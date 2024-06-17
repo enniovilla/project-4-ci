@@ -1,9 +1,15 @@
 from django.shortcuts import render
-from .models import CarouselImage
+from .models import CarouselImage, About
 
 def home(request):
     image = CarouselImage.objects.all()
-    return render(request, 'main/index.html', {'image': image})
+    about = About.objects.first()
+
+    context = {
+        'image': image,
+        'about': about,
+    }
+    return render(request, 'main/index.html', context)
 
 def discover(request):
     return render(request, 'main/discover.html')
