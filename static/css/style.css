@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: var(--secondary-color);
 }
 
 header>div:first-child a,
