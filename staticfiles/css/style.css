@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ------------------------------------------------------------------------------------ Color variables */
+
+:root {
+    --primary-color: #78c2ad;
+    --secondary-color: #fff5e0;
+    --hover: #609c8b;
+}
+
+/* ------------------------------------------------------------------------------------ Base html */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--secondary-color);
+}
+
+header>div:first-child a,
+footer a {
+    text-decoration: none;
+}
+
+header:first-child a:hover,
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar {
+    top: 40px;
+    background-color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.text-old-lace {
+    color: var(--secondary-color);
+}
+
+.btn-old-lace {
+    background-color: var(--secondary-color);
+    border: var(--secondary-color);
+}
+
+.custom-margin {
+    margin-top: 200px;
+}
+
+footer {
+    margin-top: 40px;
+    background: var(--primary-color);
+}
+
+/* ------------------------------------------------------------------------------------ Treatments html */
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
