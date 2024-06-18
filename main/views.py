@@ -19,6 +19,3 @@ def discover_spa(request):
         'spa_page_content': spa_page_content
     }
     return render(request, 'main/discover.html', context)
-
-def treatments(request):
-    return render(request, 'main/treatments.html')
