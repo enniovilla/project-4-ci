@@ -4,7 +4,7 @@
 <section>
     <div class="row justify-content-center">
         <div class="col-8">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
                 <h1 class="text-center">Our Treatments</h1>
                 <br>
                 {% for section in sections %}
@@ -21,6 +21,10 @@
                             <div id="collapse{{ item.id }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
                                 <div class="accordion-body">
                                     {{ item.body }}
+                                    <br><br>
+                                    <p><strong>Duration:</strong> {{ item.duration }}</p>
+                                    <p><strong>Price:</strong> €{{ item.price }}</p>
+                                    <button class="btn btn-light btn-old-lace border border-dark-subtle fw-bold me-2" type="button">Book Now</button>
                                 </div>
                             </div>
                         </div>
