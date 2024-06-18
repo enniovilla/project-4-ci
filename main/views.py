@@ -12,7 +12,7 @@ def home(request):
     return render(request, 'main/index.html', context)
 
 
-def discover_spa(request):
+def discover(request):
     spa_page_content = Discover.objects.filter(is_active=True).first()
 
     context = {
