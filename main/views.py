@@ -22,6 +22,3 @@ def discover_spa(request):
 
 def treatments(request):
     return render(request, 'main/treatments.html')
-
-def location(request):
-    return render(request, 'main/location.html')
