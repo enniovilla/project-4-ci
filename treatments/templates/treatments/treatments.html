@@ -8,28 +8,33 @@
                 <h1 class="text-center">Our Treatments</h1>
                 <br>
                 {% for section in sections %}
-                    <h2>{{ section.title }}</h2>
-                    {% for item in section.accordion_items.all %}
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse{{ item.id }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
-                                    aria-controls="collapse{{ item.id }}">
-                                    {{ item.header }}
-                                </button>
-                            </h2>
-                            <div id="collapse{{ item.id }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
-                                <div class="accordion-body">
-                                    {{ item.body }}
-                                    <br><br>
-                                    <p><strong>Duration:</strong> {{ item.duration }}</p>
-                                    <p><strong>Price:</strong> €{{ item.price }}</p>
-                                    <button class="btn btn-light btn-old-lace border border-dark-subtle fw-bold me-2" type="button">Book Now</button>
-                                </div>
+                <h2>{{ section.title }}</h2>
+                {% for item in section.accordion_items.all %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse{{ item.id }}"
+                            aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                            aria-controls="collapse{{ item.id }}">
+                            {{ item.header }}
+                        </button>
+                    </h2>
+                    <div id="collapse{{ item.id }}"
+                        class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
+                        <div class="accordion-body d-flex flex-column align-items-center align-items-md-start">
+                            {{ item.body }}
+                            <br><br>
+                            <div class="text-center text-md-start">
+                                <p><strong>Duration:</strong> {{ item.duration }}</p>
+                                <p><strong>Price:</strong> €{{ item.price }}</p>
+                                <button class="btn btn-light btn-old-lace border border-dark-subtle fw-bold me-2"
+                                    type="button">Book Now</button>
                             </div>
                         </div>
-                        {% endfor %}
-                        <br>
+                    </div>
+                </div>
+                {% endfor %}
+                <br>
                 {% endfor %}
             </div>
         </div>

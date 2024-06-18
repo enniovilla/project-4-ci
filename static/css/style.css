@@ -48,3 +48,8 @@ footer {
     margin-top: 40px;
     background: var(--primary-color);
 }
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
