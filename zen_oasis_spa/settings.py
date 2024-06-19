@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_summernote',
     'allauth',
     'allauth.account',
     'cloudinary_storage',
@@ -51,7 +52,6 @@ INSTALLED_APPS = [
     'main',
     'treatments',
     'contact',
-    'booking',
 ]
 
 SITE_ID = 1
