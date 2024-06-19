@@ -16,13 +16,10 @@ class AccordionItem(models.Model):
     body = models.TextField()
 
     DURATION_CHOICES = [
-        ('30', '30 minutes'),
-        ('45', '45 minutes'),
-        ('60', '60 minutes'),
+        ('30 minutes', '30 minutes'),
+        ('45 minutes', '45 minutes'),
+        ('60 minutes', '60 minutes'),
     ]
 
     duration = models.CharField(max_length=50, choices=DURATION_CHOICES)
     price = models.DecimalField(max_digits=10, decimal_places=2) 
-
-    def __str__(self):
-        return self.header
