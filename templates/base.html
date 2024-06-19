@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'discover' as discover_url %}
 {% url 'treatments' as treatments_url %}
+{% url 'contact' as contact_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -34,7 +35,7 @@
     <header>
         <!-- Top bar -->
         <div class="container-fluid fixed-top text-center text-md-end bg-dark py-2">
-            <a href="" class="text-white">Contact Us</a>
+            <a href="{% url 'contact' %}" class="text-white">Contact Us</a>
             {% if user.is_authenticated %}
             <span class="text-white">|</span>
             <a href="" class="text-white">My Bookings</a>
