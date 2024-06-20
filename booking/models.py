@@ -1,3 +1,20 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.utils import timezone
+from django.core.exceptions import ValidationError
+import datetime
 
-# Create your models here.
+
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_arrival = models.DateField(default=datetime.date.today)
+    date_leave = models.DateField(default=datetime.date.today)
+    time_arrival = models.TimeField(default=datetime.time(8))
+    time_leave = models.TimeField(default=datetime.time(18))
+
+    def clean(self):
+        if self.date_arrival < timezone.now().date():
+            raise ValidationError("Arrival date cannot be in the past.")
+
+    def __str__(self):
+        return f'{self.user} booking'
