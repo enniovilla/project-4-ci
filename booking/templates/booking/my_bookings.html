@@ -1,32 +1,72 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
 <div class="container">
-    <h1 class="mt-4 mb-4">My Bookings</h1>
+    {% if messages %}
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    <h1 class="mt-4 mb-4 text-center">My Bookings</h1>
     <div class="row">
         {% if bookings %}
-            {% for booking in bookings %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Booking</h5>
-                            <p class="card-text"><strong>Arrival</strong>: {{ booking.date_arrival }} at {{ booking.time_arrival }}</p>
-                            <p class="card-text"><strong>Departure</strong>: {{ booking.date_leave }} at {{ booking.time_leave }}</p>
-                            <a href="" class="btn btn-primary btn-sm mr-2">Edit</a>
-                            <form action="" method="post" style="display: inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            </form>
+        {% for booking in bookings %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Booking</h5>
+                    <p class="card-text"><strong>Arrival</strong>: {{ booking.date_arrival }} at
+                        {{ booking.time_arrival }}</p>
+                    <p class="card-text"><strong>Departure</strong>: {{ booking.date_leave }} at
+                        {{ booking.time_leave }}</p>
+                    <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm mr-2">Edit</a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#deleteModal{{ booking.id }}">
+                        Delete
+                    </button>
+                    <!-- Delete confirmation modal -->
+                    <div class="modal fade" id="deleteModal{{ booking.id }}" tabindex="-1"
+                        aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">Are you sure you want to delete this booking?<br>This action
+                                        cannot be undone.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <form action="{% url 'delete_booking' booking.id %}" method="post"
+                                        style="display: inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        {% else %}
-            <div class="col">
-                <p>No bookings found.</p>
             </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col">
+            <p>You have no bookings.</p>
+        </div>
         {% endif %}
     </div>
 </div>
