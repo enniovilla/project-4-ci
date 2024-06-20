@@ -1,11 +1,9 @@
-# contact/admin.py
-
 from django.contrib import admin
 from .models import ContactMessage
 
+@admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'subject', 'timestamp')
-    search_fields = ('name', 'email', 'subject', 'message')
+    list_filter = ('name', 'email', 'timestamp')
+    search_fields = ('name', 'email', 'subject',)
     date_hierarchy = 'timestamp'
-
-admin.site.register(ContactMessage, ContactMessageAdmin)
