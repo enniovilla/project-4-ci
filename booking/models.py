@@ -16,6 +16,9 @@ class Booking(models.Model):
         if self.date_arrival < timezone.now().date():
             raise ValidationError("Arrival date cannot be in the past.")
 
+        if self.date_leave and self.date_leave < timezone.now().date():
+            raise ValidationError("Arrival date cannot be in the past.")
+
     def __str__(self):
         return f'{self.user} booking'
 
