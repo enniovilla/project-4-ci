@@ -3,7 +3,7 @@ from .models import CarouselImage, Welcome
 
 def home(request):
     image = CarouselImage.objects.all()
-    welcome = Welcome.objects.filter(is_active=True).first()
+    welcome = Welcome.objects.filter().first()
 
     context = {
         'image': image,
