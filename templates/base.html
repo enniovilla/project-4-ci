@@ -1,9 +1,11 @@
 {% load static %}
+{% load allauth account %}
 
 {% url 'home' as home_url %}
 {% url 'discover' as discover_url %}
 {% url 'treatments' as treatments_url %}
 {% url 'contact' as contact_url %}
+{% url 'booking' as booking_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -65,13 +67,13 @@
                             <a class="nav-link" href="{% url 'treatments' %}">Treatments</a>
                         </li>
                     </ul>
-                    <a href="" class="btn btn-light btn-old-lace fw-bold me-2">Book Now</a>
+                    <a href="{% url 'booking' %}" class="btn btn-light btn-old-lace fw-bold me-2">Book Now</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="custom-margin">
+    <main class="custom-main">
         {% block content %}
         {% endblock content %}
     </main>
