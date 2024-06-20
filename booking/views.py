@@ -51,3 +51,17 @@ def edit_booking(request, booking_id):
         'booking': booking,
     }
     return render(request, 'booking/edit_booking.html', context)
+
+@login_required
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, 'Booking deleted successfully.')
+        return redirect('my_bookings')
+    
+    context = {
+        'booking': booking,
+    }
+    return render(request, 'booking/delete_booking.html', context)
