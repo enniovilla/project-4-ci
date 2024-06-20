@@ -10,8 +10,8 @@ class Section(models.Model):
         return self.title
 
 
-class AccordionItem(models.Model):
-    section = models.ForeignKey(Section, related_name='accordion_items', on_delete=models.CASCADE)
+class Treatment(models.Model):
+    section = models.ForeignKey(Section, related_name='treatment_items', on_delete=models.CASCADE)
     header = models.CharField(max_length=100)
     body = models.TextField()
 
@@ -22,4 +22,7 @@ class AccordionItem(models.Model):
     ]
 
     duration = models.CharField(max_length=50, choices=DURATION_CHOICES)
-    price = models.DecimalField(max_digits=10, decimal_places=2) 
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f'{self.header}'

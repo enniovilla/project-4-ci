@@ -9,7 +9,7 @@
                 <br>
                 {% for section in sections %}
                 <h2>{{ section.title }}</h2>
-                {% for item in section.accordion_items.all %}
+                {% for item in section.treatment_items.all %}
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
