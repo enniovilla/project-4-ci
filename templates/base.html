@@ -6,6 +6,8 @@
 {% url 'treatments' as treatments_url %}
 {% url 'contact' as contact_url %}
 {% url 'booking' as booking_url %}
+{% url 'edit_booking' as edit_booking_url %}
+{% url 'my_bookings' as my_bookings_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -40,7 +42,7 @@
             <a href="{% url 'contact' %}" class="text-white">Contact Us</a>
             {% if user.is_authenticated %}
             <span class="text-white">|</span>
-            <a href="" class="text-white">My Bookings</a>
+            <a href="{% url 'my_bookings' %}" class="text-white">My Bookings</a>
             <span class="text-white">|</span>
             <a href="{% url 'account_logout' %}" class="text-white">Sign Out</a>
             {% else %}
