@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4 mb-4">My Bookings</h1>
+    <div class="row">
+        {% if bookings %}
+            {% for booking in bookings %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Booking</h5>
+                            <p class="card-text"><strong>Arrival</strong>: {{ booking.date_arrival }} at {{ booking.time_arrival }}</p>
+                            <p class="card-text"><strong>Departure</strong>: {{ booking.date_leave }} at {{ booking.time_leave }}</p>
+                            <a href="" class="btn btn-primary btn-sm mr-2">Edit</a>
+                            <form action="" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col">
+                <p>No bookings found.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
