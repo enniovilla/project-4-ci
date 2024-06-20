@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Booking{% endblock title %}
+
+{% block content %}
+<h1 class="text-center">Booking</h1>
+<div class="row justify-content-center">
+    <div class="col-8">
+        <h5>Remember you will be charged by hour. Down below you can choose the amount of time you're going to stay with
+            us!</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
