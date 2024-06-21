@@ -74,8 +74,13 @@
             </div>
         </nav>
     </header>
-
+    
     <main class="custom-main">
+        <div class="col text-end mx-5">
+            {% if user.is_authenticated %}
+            <span class="text-muted">Hello, {{user}}! </span>                       
+            {% endif %}
+        </div>
         {% block content %}
         {% endblock content %}
     </main>
