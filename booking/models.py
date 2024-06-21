@@ -6,6 +6,9 @@ import datetime
 
 
 class Booking(models.Model):
+    """
+    Represents a booking made by a user.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date_arrival = models.DateField(default=datetime.date.today)
     date_leave = models.DateField(default=datetime.date.today)
@@ -24,5 +27,8 @@ class Booking(models.Model):
 
 
 class MyBooking (models.Model):
+    """
+    Represents a user-specific booking linked to a main Booking.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     my_booking = models.ForeignKey(Booking, on_delete=models.CASCADE)

@@ -3,6 +3,9 @@ from .models import ContactMessage
 
 
 class ContactForm(forms.ModelForm):
+    """
+    Form class based on the ContactMessage model.
+    """
     class Meta:
         model = ContactMessage
         fields = ['name', 'email', 'subject', 'message']

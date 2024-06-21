@@ -4,6 +4,14 @@ from .forms import ContactForm
 
 
 def contact(request):
+    """
+    Renders the contact form page and handles form submission.
+    If the request method is POST, validates and saves the ContactForm data.
+    If the form is valid, a success message is displayed,
+    and the user is redirected
+    back to the contact page.
+    If the form is invalid, an error message is displayed.
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():

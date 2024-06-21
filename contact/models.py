@@ -2,6 +2,9 @@ from django.db import models
 
 
 class ContactMessage(models.Model):
+    """
+    Represents a message sent through a contact form
+    """
     name = models.CharField(max_length=100)
     email = models.EmailField()
     subject = models.CharField(max_length=200)

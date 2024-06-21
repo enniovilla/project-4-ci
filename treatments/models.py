@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Section(models.Model):
+    """
+    Represents a section/category of treatments.
+    """
     title = models.CharField(max_length=100)
 
     class Meta:
@@ -12,6 +15,9 @@ class Section(models.Model):
 
 
 class Treatment(models.Model):
+    """
+    Represents an individual treatment within a section.
+    """
     section = models.ForeignKey(
         Section, related_name='treatment_items', on_delete=models.CASCADE)
     header = models.CharField(max_length=100)

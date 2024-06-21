@@ -3,14 +3,25 @@ from .models import Booking
 
 
 class DateInput(forms.DateInput):
+    """
+    Custom form widget for rendering
+    date input fields with specific attributes.
+    """
     input_type = 'date'
 
 
 class TimeInput(forms.TimeInput):
+    """
+    Custom form widget for rendering
+    time input fields with specific attributes.
+    """
     input_type = 'time'
 
 
 class BookingForm(forms.ModelForm):
+    """
+    Form class based on the Booking model for capturing booking details.
+    """
     class Meta:
         model = Booking
         fields = ['date_arrival', 'time_arrival', 'date_leave', 'time_leave']

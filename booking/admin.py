@@ -3,6 +3,9 @@ from .models import Booking
 
 
 class BookingAdmin(admin.ModelAdmin):
+    """
+    Admin configuration for managing Booking instances.
+    """
     list_display = (
         'user', 'date_arrival', 'time_arrival', 'date_leave', 'time_leave')
     list_display_links = (
