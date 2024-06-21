@@ -6,6 +6,7 @@
 <section class="container-fluid">
     <div class="row align-items-center">
         <div class="col-lg-6 col-12">
+            <!-- Carousel -->
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-indicators">
                     {% for image in image %}
@@ -33,6 +34,7 @@
                 </button>
             </div>
         </div>
+        <!-- Welcome text -->
         <div class="col-lg-6 col-12 text-center">
             <h1>{{ welcome.heading | safe }}</h1>
             {{ welcome.paragraph | safe }}
