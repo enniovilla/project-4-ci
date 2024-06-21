@@ -61,7 +61,7 @@ footer {
     color: var(--secondary-color);
 }
 
-/* ------------------------------------------------------------------------------------ Treatments html */
+/* ------------------------------------------------------------------------------------ Button html */
 
 .btn-minty {
     background-color: var(--primary-color);
@@ -69,4 +69,8 @@ footer {
 
 .btn-minty:hover {
     background-color: var(--hover);
+}
+
+.hidden {
+    display: none;
 }
