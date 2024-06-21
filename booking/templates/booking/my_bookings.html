@@ -16,6 +16,8 @@
     </div>
     {% endif %}
     <h1 class="mt-4 mb-4 text-center">My Bookings</h1>
+    <h5>Hello, {{ user }}!</h5>
+    <p>Here you can manage your bookings.</p>
     <div class="row">
         {% if bookings %}
         {% for booking in bookings %}
