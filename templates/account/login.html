@@ -24,7 +24,7 @@
 
                 <div class="mb-3">
                     <label for="{{ form.login.id_for_label }}" class="form-label">{% trans "User" %}</label>
-                    <div class="input-group d-grid gap-2">
+                    <div class="input-group d-grid gap-2 form-control">
                         {{ form.login }}
                         <div class="invalid-feedback">
                             {% if form.login.errors %}
@@ -37,7 +37,7 @@
 
                 <div class="mb-3">
                     <label for="{{ form.password.id_for_label }}" class="form-label">{% trans "Password" %}</label>
-                    <div class="input-group d-grid gap-2">
+                    <div class="input-group d-grid gap-2 form-control">
                         {{ form.password }}
                         <div class="invalid-feedback">
                             {% if form.password.errors %}
