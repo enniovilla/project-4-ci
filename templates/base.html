@@ -1,5 +1,5 @@
 {% load static %}
-{% load allauth account %}
+{% load i18n %}
 
 {% url 'home' as home_url %}
 {% url 'discover' as discover_url %}
@@ -74,11 +74,11 @@
             </div>
         </nav>
     </header>
-    
+
     <main class="custom-main">
         <div class="col text-end mx-5">
             {% if user.is_authenticated %}
-            <span class="text-muted">Hello, {{user}}! </span>                       
+            <span class="text-muted">Hello, {{user}}! </span>
             {% endif %}
         </div>
         {% block content %}

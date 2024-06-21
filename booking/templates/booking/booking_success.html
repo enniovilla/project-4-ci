@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="container-fluid center-div">
-    <div class="jumbotron text-center">
-      <h1 class="display-5">Booking successful!</h1>
-      <p>Details of your booking:</p>
-      <p>{{ booking.date }}</p>
-      <p>From {{ booking.date_arrival }} {{ booking.time_arrival }} to {{ booking.date_leave }} {{ booking.time_leave }}</p>
-      <img src="{% static 'images/booking_success.jpg' %}" alt="Happy woman doing skin care" class="img-fluid">
-    </div>
+  <div class="jumbotron text-center">
+    <h1 class="display-5">{% trans "Booking successful!" %}</h1>
+    <p>{% trans "Details of your booking:" %}</p>
+    <p>{{ booking.date }}</p>
+    <p>From {{ booking.date_arrival }} {{ booking.time_arrival }} to {{ booking.date_leave }} {{ booking.time_leave }}
+    </p>
+    <img src="{% static 'images/booking_success.jpg' %}" alt="Happy woman doing skin care" class="img-fluid">
   </div>
+</div>
 {% endblock content %}

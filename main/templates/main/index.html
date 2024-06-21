@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load cloudinary %}
 
 {% block content %}
@@ -8,12 +9,10 @@
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-indicators">
                     {% for image in image %}
-                    <button type="button" data-bs-target="#carouselExample"
-                        data-bs-slide-to="{{ forloop.counter0 }}" 
-                        class="{% if forloop.first %}active{% endif %}"
-                        {% if forloop.first %}aria-current="true"{% endif %}
-                        aria-label="Slide {{ forloop.counter }}"></button>
-                {% endfor %}
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="{{ forloop.counter0 }}"
+                        class="{% if forloop.first %}active{% endif %}" {% if forloop.first %}aria-current="true"
+                        {% endif %} aria-label="Slide {{ forloop.counter }}"></button>
+                    {% endfor %}
                 </div>
                 <div class="carousel-inner">
                     {% for image in image %}

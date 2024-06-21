@@ -1,22 +1,27 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block content %}
 <section>
     <div class="row justify-content-center">
         <div class="col-8">
             <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
-                <h1 class="text-center">Our Treatments</h1>
+                <h1 class="text-center">{% trans "Our Treatments" %}</h1>
                 <br>
+                <!-- Intro paragraph -->
                 <p>
-                    At Zen Oasis, we offer a unique all-inclusive spa experience where you are charged by the hour. This
+                    {% blocktranslate %}At Zen Oasis, we offer a unique all-inclusive spa experience where you are charged by the hour. This
                     means you can indulge in a variety of treatments and services without the hassle of additional fees
-                    for a whopping <strong>130 euros an hour</strong>.
+                    for a whopping <strong>130 euros an hour</strong>.{% endblocktranslate %}
                 </p>
-                <p>Check out the various treatments we offer below!</p>
+                <p>{% trans "Check out the various treatments we offer below!" %}</p>
                 <br>
+                <!-- Section accordion -->
                 {% for section in sections %}
                 <h2>{{ section.title }}</h2>
                 {% for item in section.treatment_items.all %}
+                <!-- Accordion header -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
@@ -26,13 +31,14 @@
                             {{ item.header }}
                         </button>
                     </h2>
+                    <!-- Accordion body -->
                     <div id="collapse{{ item.id }}"
                         class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
                         <div class="accordion-body d-flex flex-column align-items-center align-items-md-start">
                             {{ item.body }}
                             <br><br>
                             <div class="text-center text-md-start">
-                                <p><strong>Duration:</strong> {{ item.duration }}</p>
+                                <p><strong>{% trans "Duration:" %}</strong> {{ item.duration }}</p>
                             </div>
                         </div>
                     </div>
@@ -44,5 +50,4 @@
         </div>
     </div>
 </section>
-
 {% endblock content %}

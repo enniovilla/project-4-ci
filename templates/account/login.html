@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% load i18n %}
 
 {% block head_title %}
@@ -22,6 +23,7 @@
                 </div>
                 {% endif %}
 
+                <!-- Login input -->
                 <div class="mb-3">
                     <label for="{{ form.login.id_for_label }}" class="form-label">{% trans "User" %}</label>
                     <div class="input-group d-grid gap-2 form-control">
@@ -35,6 +37,7 @@
                     </div>
                 </div>
 
+                <!-- Password input -->
                 <div class="mb-3">
                     <label for="{{ form.password.id_for_label }}" class="form-label">{% trans "Password" %}</label>
                     <div class="input-group d-grid gap-2 form-control">
@@ -48,6 +51,7 @@
                     </div>
                 </div>
 
+                <!-- Remember me button -->
                 <div class="mb-3 form-check">
                     {{ form.remember }}
                     <label class="form-check-label" for="{{ form.remember.id_for_label }}">

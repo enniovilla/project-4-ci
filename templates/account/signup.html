@@ -1,6 +1,6 @@
 {% extends "base.html" %}
+
 {% load i18n %}
-{% load allauth account %}
 
 {% block head_title %}
 {% trans "Sign Up" %}
@@ -37,7 +37,7 @@
                         {% endif %}
                         {% if form.username.value and form.username.errors %}
                         <div class="alert alert-danger" role="alert">
-                            This username is already taken. Please choose a different one.
+                            {% trans "This username is already taken. Please choose a different one." %}
                         </div>
                         {% endif %}
                     </div>
@@ -71,7 +71,7 @@
                         {% endif %}
                         {% if form.password1.value and form.password2.value and form.password1.value != form.password2.value %}
                         <div class="alert alert-danger" role="alert">
-                            The passwords do not match. Please try again.
+                            {% trans "The passwords do not match. Please try again." %}
                         </div>
                         {% endif %}
                     </div>
