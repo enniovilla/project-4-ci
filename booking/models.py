@@ -22,6 +22,7 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.user} booking'
 
+
 class MyBooking (models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     my_booking = models.ForeignKey(Booking, on_delete=models.CASCADE)

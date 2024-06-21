@@ -7,7 +7,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('booking', '0003_rename_date_booking_date_arrival_booking_date_leave'),
+        (
+            'booking',
+            '0003_rename_date_booking_date_arrival_booking_date_leave'),
     ]
 
     operations = [

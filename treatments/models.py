@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Section(models.Model):
     title = models.CharField(max_length=100)
 
@@ -11,7 +12,8 @@ class Section(models.Model):
 
 
 class Treatment(models.Model):
-    section = models.ForeignKey(Section, related_name='treatment_items', on_delete=models.CASCADE)
+    section = models.ForeignKey(
+        Section, related_name='treatment_items', on_delete=models.CASCADE)
     header = models.CharField(max_length=100)
     body = models.TextField()
 

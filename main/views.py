@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import CarouselImage, Welcome
 
+
 def home(request):
     image = CarouselImage.objects.all()
     welcome = Welcome.objects.filter().first()

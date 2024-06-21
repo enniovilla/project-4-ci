@@ -14,12 +14,25 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Treatment',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID'
+                    )),
                 ('header', models.CharField(max_length=100)),
                 ('body', models.TextField()),
-                ('duration', models.CharField(choices=[('30 minutes', '30 minutes'), ('45 minutes', '45 minutes'), ('60 minutes', '60 minutes')], max_length=50)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('section', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='treatment_items', to='treatments.section')),
+                ('duration', models.CharField(
+                    choices=[
+                        ('30 minutes', '30 minutes'),
+                        ('45 minutes', '45 minutes'),
+                        ('60 minutes', '60 minutes')], max_length=50)),
+                ('price', models.DecimalField(
+                    decimal_places=2, max_digits=10)),
+                ('section', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    related_name='treatment_items',
+                    to='treatments.section')),
             ],
         ),
         migrations.DeleteModel(

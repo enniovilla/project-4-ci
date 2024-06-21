@@ -13,6 +13,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='accordionitem',
             name='duration',
-            field=models.CharField(choices=[('30 minutes', '30 minutes'), ('45 minutes', '45 minutes'), ('60 minutes', '60 minutes')], max_length=50),
+            field=models.CharField(
+                choices=[
+                    ('30 minutes', '30 minutes'),
+                    ('45 minutes', '45 minutes'),
+                    ('60 minutes', '60 minutes')], max_length=50),
         ),
     ]

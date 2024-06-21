@@ -14,9 +14,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Discover',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('heading', models.CharField(max_length=100)),
-                ('image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='image')),
+                ('image', cloudinary.models.CloudinaryField(
+                    max_length=255, verbose_name='image')),
                 ('paragraph1', models.TextField()),
                 ('paragraph2', models.TextField()),
                 ('paragraph3', models.TextField()),
