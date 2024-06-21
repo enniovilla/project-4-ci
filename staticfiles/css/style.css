@@ -44,8 +44,9 @@ footer a:hover {
     border: var(--secondary-color);
 }
 
-.custom-margin {
+.custom-main {
     margin-top: 200px;
+    min-height: 70vh;
 }
 
 footer {
@@ -58,4 +59,14 @@ footer {
 .accordion-button:not(.collapsed) {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+/* ------------------------------------------------------------------------------------ Treatments html */
+
+.btn-minty {
+    background-color: var(--primary-color);
+}
+
+.btn-minty:hover {
+    background-color: var(--hover);
 }
