@@ -2,17 +2,13 @@
 {% load cloudinary %}
 
 {% block content %}
-<section class="container">
+<section class="container-fluid">
     <div class="row align-items-center">
-        <div class="col-lg-6 text-center">
-            <h1>{{ welcome.heading | safe }}</h1>
-            <p>{{ welcome.paragraph | safe }}</p>
-        </div>
-        <div class="col-lg-6">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="col-lg-6 col-12">
+            <div id="carouselExample" class="carousel slide">
                 <div class="carousel-indicators">
                     {% for image in image %}
-                    <button type="button" data-bs-target="#carouselExampleDark"
+                    <button type="button" data-bs-target="#carouselExample"
                         data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"
                         aria-current="{% if forloop.first %}true{% endif %}"
                         aria-label="Slide {{ forloop.counter }}"></button>
@@ -20,26 +16,24 @@
                 </div>
                 <div class="carousel-inner">
                     {% for image in image %}
-                    <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="10000">
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
                         <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>{{ image.title }}</h5>
-                            <p>{{ image.description }}</p>
-                        </div>
                     </div>
                     {% endfor %}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+        </div>
+        <div class="col-lg-6 col-12 text-center">
+            <h1>{{ welcome.heading | safe }}</h1>
+            <p>{{ welcome.paragraph | safe }}</p>
         </div>
     </div>
 </section>
