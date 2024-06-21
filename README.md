@@ -1,116 +1,337 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Zen Oasis Spa
 
-Welcome Ennio Villa,
+Welcome to Zen Oasis Spa, your ultimate sanctuary for relaxation and rejuvenation. Nestled in a serene corner of the city, Zen Oasis Spa offers a tranquil escape from the hustle and bustle of everyday life. Here, every detail is meticulously crafted to provide you with an unparalleled spa experience, ensuring that your mind, body, and spirit are harmoniously balanced.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Zen Oasis is an all-inclusive 24-hour spa that charges by the hour. All services are included.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 14, 2024**
+Visit the deployed website here → [Zen Oasis Spa](https://zen-oasis-spa-5b31090aaae5.herokuapp.com/)
 
-## Gitpod Reminders
+![Zen Oasis Spa](documentation/images/am-i-responsive.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Content
 
-`python3 -m http.server`
+* [User Experience](#user-experience-ux)
+    * [Site Objectives](#site-objectives)
+    * [User Stories](#user-stories)
+* [Design](#design)
+    * [Website Structure](#website-structure)
+    * [Wireframes](#wireframes)
+    * [Color Scheme](#color-scheme)
+    * [Typography](#typography)
+* [Features and Future Features](#features-and-future-features)
+    * [Features](#features)
+    * [Future Features](#future-features)
+* [Technologies Used](#technologies-used)
+* [Deployment, Fork and Clone](#deployment-fork-and-clone)
+    * [Deployment](#deployment)
+    * [Fork](#how-to-fork)
+    * [Clone](#how-to-clone)
+* [Testing](#testing)
+* [Bugs](#bugs)
+    * [Known Bugs](#known-bugs)
+* [Credits](#credits)
+* [Content](#content)
+* [Media](#media)
+* [Acknowledgments](#acknowledgments)
 
-A blue button should appear to click: _Make Public_,
+## User Experience (UX)
 
-Another blue button should appear to click: _Open Browser_.
+### Site Objectives
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+With the creation of this website I aim to make life easier for clients who want to spend some quiet time in a spa. By booking online, the customer just has to go to our spa and enjoy the time. On the website, customers can also check out all the services we offer.
 
-A blue button should appear to click: _Make Public_,
+### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+#### First Time User
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* I want to relax.
+* I want to disconnect from the world.
+* I want to see what kind of services I can find at a spa.
+* I want to book a day to go to the spa.
 
-To log into the Heroku toolbelt CLI:
+#### Returning User
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* I want to check new treatments the spa has to offer.
+* I want to contact the establishment.
+* I want to sign up and book a date.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+#### Frequent User
 
-------
+* I want to book new dates to go back.
 
-## Release History
+[Back to top](<#content>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Design
 
-**June 14, 2024,** Temporarily remove Mongo until key issue is resolved
+### Website Structure
 
-**May 28 2024:** Fix Mongo and Links installs
+My plan was much bigger than I really thought I could do. I didn't expect the fourth Code Institute project to be so extensive and complicated, I hope I can deliver and I say that because it's 5 o'clock in the morning, I haven't slept yet and today is my deadline, but that said, you'll see that the final product came out with less content than what I put in the wireframes, but what matters is that I managed to do a cohesive job!
 
-**April 26 2024:** Update node version to 16
+This website consists of a home page, a treatment page, a booking page, a login page, a registration page, a contact page and a page for users to manage their bookings.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Wireframes
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Figma was the software I opted to create the wireframes. I created wireframes for mobile and desktop. Click on the button below to see them.
+<details>
+<summary>Wireframes</summary>
+<br><br>
+Home page<br>
+<img src="documentation/images/index.png">
+<br><br>
+Discover Zen Oasis page - This page I ended up merging with the index page because of the redundant content.<br>
+<img src="documentation/images/discover.png">
+<br><br>
+Treatments/Services page<br>
+<img src="documentation/images/treatments_services.png">
+<br><br>
+Booking page<br>
+<img src="documentation/images/booking.png">
+<br><br>
+Contact page<br>
+<img src="documentation/images/contact.png">
+<br><br>
+Sign In page<br>
+<img src="documentation/images/sign_in.png">
+<br><br>
+Sign Up page<br>
+<img src="documentation/images/sign_up.png">
+<br><br>
+My Bookings page<br>
+<img src="documentation/images/my_bookings.png">
+</details>
+<br>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Back to top](<#content>)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Color Scheme
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+This website has two main colors, `#78C2AD` being the primary and `#FFF5E0` the secondary, in addition to the black color `#000000` as the font color, the top bar above the navigation bar and details. The color `#609C8B` was used to make some hover effects.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Some other singular colors also appear in the project, such as the colors of the standard Bootstrap buttons.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Zen Oasis Spa Color Scheme](documentation/images/coolors.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to top](<#content>)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Flow Diagram
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+This is a very basic flow diagram about the flow an user and an admin could have when using the website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Zen Oasis Spa Diagram](documentation/images/diagram.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Back to top](<#content>)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Entity Relationship Diagram
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The ERD is pretty simple too, thanks to my bad time management.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Zen Oasis Spa Diagram](documentation/images/erd.png)
 
-------
+[Back to top](<#content>)
 
-## FAQ about the uptime script
+### Typography
 
-**Why have you added this script?**
+The font I chose to use was [Roboto](https://fonts.google.com/specimen/Roboto) from Google Fonts and as a fall back font, sans-serif.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Back to top](<#content>)
 
-**How will this affect me?**
+## Features and Future Features
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Features
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This is a multi-page website and all of them are responsive. On each page we have:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- A favicon.<br>
+![Zen Oasis Spa favicon](documentation/images/favicon.png)
 
-**So….?**
+- A navigation bar with clickable logo and names that will take the user to the home page and the menu with sign up button highlighted to facilitate the user experience. If the user can scroll down, the navigation bar will be fixed at the top of the screen for easy access. There is a top bar on top of the navigation bar with the login navigation source.
+![Zen Oasis Spa navbar](documentation/images/navbar.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- A footer with social media icons that lead to external pages and to my github page in case you click my name.
+![Zen Oasis Spa footer](documentation/images/footer.png)
 
-**Can I opt out?**
+[Back to top](<#content>)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### The Home Page
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+On the home page the user can see a carousel with pictures of clients enjoying their times in the spa and also a welcome text, as well as seeing the navigation bar.
+![Zen Oasis Spa home page](documentation/images/index_page.png)
 
-**Anything more?**
+[Back to top](<#content>)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### The Treatments Page
 
----
+On this page the user will find the treatments the spa has to offer, they are in accordions to improve user experience.
+![Zen Oasis Spa treatment page](documentation/gifs/treatments.gif)
 
-Happy coding!
+[Back to top](<#content>)
+
+### The Contact Page
+
+The user will find a contact form on this page.
+![Zen Oasis Spa contact page](documentation/images/contact_page.png)
+
+[Back to top](<#content>)
+
+### Sign In Page
+
+A page where the user can log in to their account.
+![Zen Oasis Spa sign in page](documentation/images/sign_in_page.png)
+
+[Back to top](<#content>)
+
+### Sign Up Page
+
+The user can sign up here.
+![Zen Oasis Spa sign up page](documentation/images/sign_up_page.png)
+
+[Back to top](<#content>)
+
+### Book Now Page
+
+This page will take you to the login page in case you are not logged in, but in case you are, you are redirected to the booking page. A small detail is that if you are logged in, at the top right of the screen, below the navigation bar, you can see a message "Hello, username" and this message is seen from every page of the website.
+![Zen Oasis Spa booking page](documentation/images/booking_page.png)
+
+[Back to top](<#content>)
+
+### Booking Successful Page
+
+The user will be able to see a page with a message informing them the booking was made. This message will also show details about the booking. In case the user cannot make the booking because of date mistakes or something else, he will be notified with an alert and won't be able to proceed.
+![Zen Oasis Spa booking successful page](documentation/images/booking_successful.jpg)
+
+[Back to top](<#content>)
+
+### My Bookings Page
+
+On this page the user will be able to see bookings details, edit and delete their bookings. If the user has no bookings, they will see a message informing them about it.
+![Zen Oasis Spa my bookings page](documentation/images/my_bookings_feature.png)
+
+[Back to top](<#content>)
+
+### Edit & Delete Booking Pages
+Whenever the user tries to edit or delete a booking, they will be notified if they succeeded. In case of editing a booking, if there is something wrong, they will also be notified.
+![Zen Oasis Spa edit bookings page](documentation/gifs/edit_booking.gif)
+![Zen Oasis Spa delete bookings page](documentation/gifs/delete_booking.gif)
+
+[Back to top](<#content>)
+
+### Sign Out Page
+Last but not least we have the logout page that takes the user to the home page after successfully logging out
+![Zen Oasis Spa my bookings page](documentation/images/sign_out_page.png)
+
+[Back to top](<#content>)
+
+### Future Features
+
+- I would like to have a better booking system, so the user can book singular treatments.
+- I would like to have a payment system integrated to the booking system, so the user can pay ahead and don't have to worry about it later.
+- I would like to have a fully functional authentication system, where users can recover their passwords and get messages on their emails.
+
+[Back to top](<#content>)
+
+## Technologies Used
+
+- HTML5 to create the website structure.
+- CSS3 to style the website.
+- JavaScript to create the interactions on the website.
+- [Python](https://www.python.org/) + [Django](https://www.djangoproject.com/) to create the fullstack project.
+- [Git](https://git-scm.com/) for version control.
+- [GitPod](https://www.gitpod.io/) as IDE to create the website.
+- [GitHub](https://github.com/) to store files for the website.
+- [Figma](https://www.figma.com/) to create the wireframes.
+- [Chat GPT](https://chat.openai.com/) to generate fictional texts.
+- [Google Fonts](https://fonts.google.com/) to import the font used on the website.
+- [Logo](https://logo.com/) to create favicon.
+- [Am I Responsive?](https://ui.dev/amiresponsive) to display the website image across various devices.
+- [Appetize.io](https://appetize.io/) to simulate the iOS environment.
+- [PostgreSQL](https://www.postgresql.org/) through Code Institute databases.
+- [Python Tutor](https://pythontutor.com/) to debug my code.
+- [Python Validator](https://pep8ci.herokuapp.com/#) by Code Institute to catch some errors and validate my code.
+- [Lucidchart](https://www.lucidchart.com/) to create the flowcharts.
+- [Heroku](https://www.heroku.com/) to deploy this project.
+- [Cloudinary](https://cloudinary.com/) to store the images uploaded on the website.
+
+[Back to top](<#content>)
+
+## Deployment, Fork and Clone
+
+### Deployment
+
+The application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at [Heroku](https://www.heroku.com/).
+2. Create a new app, add a unique app name and then choose your region.
+3. Click on Create App.
+4. Go to "Settings".
+5. Under Config Vars add a key "PORT" and value "8000".
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom.
+7. Go to "Deploy" and select "GitHub" in "Deployment method".
+8. To connect Heroku app to your Github repository code enter your repository name, click "Search" and then "Search" when it shows below.
+9. Choose the branch you want to build your app from.
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository.
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a "View" button to take you to your deployed link.
+
+[Back to top](<#contents>)
+
+### How to Fork
+
+1. Log in to GitHub.
+2. Go to the repository for the project.
+3. Click the Fork button in the top right corner.
+
+### How to Clone
+
+1. Log in to GitHub.
+2. Go to the repository for the project.
+3. Click on the **green code button** and select if you would like to clone with HTTPS, SSH or GitHub CLI and copy the link below.
+4. Navigate to the directory where you want to clone the repository and open terminal.
+5. Type *git clone* into the terminal and paste the link you have from number 3. Press enter. This command will download the entire repository to your local machine.
+
+[Back to top](<#content>)
+
+## Testing
+
+Performed tests can be found in [TESTING.md](TESTING.md).
+
+[Back to top](<#content>)
+
+## Bugs
+
+### Known Bugs
+
+- Sometimes the confirmation alert that you logged in or out successfully pops up next time you change the page.
+- The style of inputs on sign in and sign up pages.
+
+[Back to top](<#content>)
+
+## Credits
+
+- All the features of my website were developed with the guidance of the lessons from the Code Institute's I Think Therefore I Blog project.
+- This particular [video](https://www.youtube.com/watch?v=-9dhCQ7FdD0&t=1410s) made me understand the logic behind reservation systems.
+- With [this other video](https://www.youtube.com/watch?v=I2-JYxnSiB0) I could learn how to render calendars on my html.
+- [Django's documentation](https://docs.djangoproject.com/en/5.0/) has become my best friend alongside [W3Schools](https://www.w3schools.com/).
+
+## Content
+
+- The spa home page text and treatments descriptions were generated by [Chat GPT](https://chat.openai.com/).
+- I was having trouble building the booking system, until [Denis](https://github.com/dhardi) shared on Code Institute's Slack that he wanted a review of his project, which although it was another topic, also involved a booking system and although the work wasn't finished, it helped me A LOT.
+
+## Media
+
+The images were taken from [Pexels](https://www.pexels.com/).
+
+- [First image on carousel](https://www.pexels.com/photo/woman-in-white-tank-top-lying-on-gray-bed-3673941/)
+- [Second image on carousel](https://www.pexels.com/photo/woman-doing-facial-mask-3212179/)
+- [Third image on carousel](https://www.pexels.com/photo/woman-in-bathrobe-applying-cream-on-leg-5938595/)
+- [Booking successful image](https://www.pexels.com/photo/happy-women-with-cosmetic-masks-on-face-3851696/)
+
+## Acknowledgments
+
+I would like to acknowledge:
+- Kay Welfare - My cohort facilitator who's always there for us.
+- Jubril Akolade - My Code Institute mentor for understanding my struggles and always giving me nice suggestions.
+- My friends who are supporting me and understand if I can't hang out with them because I need to finish my project.
+- [Denis](https://github.com/dhardi) you literally saved me two days before my project submission.
+- My mom. Just because she's my mom. Love you!!!
+
+[Back to top](<#content>)
