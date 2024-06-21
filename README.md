@@ -4,7 +4,8 @@ Welcome to Zen Oasis Spa, your ultimate sanctuary for relaxation and rejuvenatio
 
 Zen Oasis is an all-inclusive 24-hour spa that charges by the hour. All services are included.
 
-Visit the deployed website here → [Zen Oasis Spa](https://zen-oasis-spa-5b31090aaae5.herokuapp.com/)
+Visit the deployed website here → [Zen Oasis Spa](https://zen-oasis-spa-5b31090aaae5.herokuapp.com/)<br>
+The Epics and User Stories you can see here → [GitHub Project](https://github.com/users/enniovilla/projects/3)
 
 ![Zen Oasis Spa](documentation/images/am-i-responsive.png)
 
