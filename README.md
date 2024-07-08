@@ -30,6 +30,7 @@ The Epics and User Stories you can see here → [GitHub Project](https://github.
 * [Testing](#testing)
 * [Bugs](#bugs)
     * [Known Bugs](#known-bugs)
+    * [Fixed Bugs](#fixed-bugs)
 * [Credits](#credits)
 * [Content](#content)
 * [Media](#media)
@@ -302,6 +303,10 @@ Performed tests can be found in [TESTING.md](TESTING.md).
 
 - Sometimes the confirmation alert that you logged in or out successfully pops up next time you change the page.
 - The style of inputs on sign in and sign up pages.
+
+### Fixed Bugs
+
+- A few days after submitting the project, I realized that the sign in and sign up pages weren't working, and neither was the admin page, so I asked for permission to fix them and managed to correct this error.
 
 [Back to top](<#content>)
 
